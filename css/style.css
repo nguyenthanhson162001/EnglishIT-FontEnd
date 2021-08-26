@@ -1,0 +1,313 @@
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            /* background-color:#24252A; */
+        }
+        
+        body {
+            /* font-family: "Montserrat",Arial,Helvetica,sans-serif; */
+            font-family: "Montserrat", serif;
+            background-color: #FFFFFF;
+            --color-main: rgb(0, 161, 112);
+            background-color: rgb(240, 240, 240);
+        }
+        
+        a {
+            text-decoration: none
+        }
+        
+        header {
+            background-color: rgb(0, 161, 112);
+        }
+        
+        header {
+            overflow: hidden;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0px;
+        }
+        
+        header a {
+            color: #edf0f1;
+            text-align: center;
+            padding: 0px 10px;
+            font-size: 16px;
+        }
+        
+        header .nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        header .border-right {
+            border-right: 1px solid rgba(224, 216, 216, 0.623);
+        }
+        
+        header a:hover {
+            color: rgb(226, 226, 226);
+        }
+        
+        header .header-left {
+            display: flex;
+            align-items: center;
+        }
+        
+        header .logo {
+            font-size: 20px;
+        }
+        
+        header .logged {
+            display: none;
+        }
+        
+        header .default {}
+        
+        header .avatar {
+            line-height: 40px;
+            overflow: hidden;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            margin: auto;
+        }
+        
+        header .avatar img {
+            object-fit: cover;
+            width: 30px;
+            height: 30px;
+        }
+        /* card - unit */
+        
+        .cards {
+            --spacing: 30px;
+            --columns: 3;
+            width: 80%;
+            margin: auto;
+        }
+        
+        .card-units {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: calc(-1 * var(--spacing));
+        }
+        
+        .card-unit {
+            display: block;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+            width: calc( calc(100% / var(--columns)) - var(--spacing));
+            margin-left: var(--spacing);
+            margin-bottom: var(--spacing);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card-unit .card-unit-image {
+            height: 200px;
+            flex-shrink: 0;
+        }
+        
+        .card-unit .card-unit-image img {
+            object-fit: cover;
+            width: 100%;
+            height: 200px;
+        }
+        
+        .card-unit .header {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .card-unit .mask {
+            background-color: #eaf3eee1;
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            right: 0;
+            height: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .card-unit:hover .mask {
+            position: absolute;
+            z-index: 1;
+            height: 100%;
+            transition: all 1s;
+        }
+        
+        .card-unit:b .mask {
+            position: absolute;
+            z-index: 1;
+            height: 100%;
+            transition: all 1s;
+        }
+        
+        .card-unit .mask .mask-title {
+            color: var(--color-main);
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 20px
+        }
+        
+        .card-unit .mask .mask-pill {
+            margin: 5px;
+            padding: 10px 25px;
+            border-radius: 25px;
+            border: 1px solid #5bc0de;
+            color: white;
+            background-color: rgba(51, 51, 51, 0.342);
+            box-shadow: rgba(100, 111, 102, 0.2) 0 7px 29px 0;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .card-unit .mask .mask-pill small {
+            font-size: 8px;
+            position: absolute;
+            bottom: 0;
+        }
+        
+        .card-unit .mask .mask-pill:hover {
+            background-image: linear-gradient(to left, rgba(173, 228, 212, 0.8), #5bc0de);
+        }
+        
+        .card-unit .mask .mask-pill::before {
+            content: "";
+            background-image: linear-gradient(to right, rgba(173, 228, 212, 0.8), #5bc0de);
+            width: 0%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+        
+        .card-unit:hover .mask .mask-pill::before {
+            content: "";
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            transition: all 1.5s;
+        }
+        
+        .card-unit .mask .anh-viet::before {}
+        
+        .card-unit .mask .viet-anh {}
+        
+        .card-unit .content {
+            color: #333;
+            padding: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card-unit .content .title {
+            font-weight: 500;
+            margin-bottom: 10px;
+            word-break: break-all;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #000;
+        }
+        
+        .card-unit .content .description {
+            font-weight: 300;
+            font-size: 14px;
+            color: #666;
+            -webkit-text-size-adjust: 100%;
+            margin-top: auto;
+            word-break: break-all;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .card-unit .footer {
+            margin-top: auto;
+            flex-shrink: 0;
+        }
+        
+        .card-unit .footer .info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            padding: 0 20px 10px 20px;
+            color: #666;
+        }
+        
+        .card-unit .footer .info .quantity-user .icon {
+            color: rgb(145, 197, 182);
+        }
+        
+        .card-unit .footer .info .quantity-user {}
+        
+        .card-unit .footer .info .quantity-vocabulary {}
+        
+        .card-unit .footer .percent-complete {
+            /* background-color: var(--color-main);
+    background-image: linear-gradient(to right, rgb(185, 221, 211), rgb(0, 161, 112));
+    width: 100%; */
+            text-align: center;
+            color: #fff;
+            /* color: black; */
+            font-size: 7px;
+            position: relative;
+            background-color: rgb(180, 178, 178);
+            z-index: 1;
+        }
+        
+        .card-unit .footer .percent-complete:before {
+            content: "";
+            /* background-color: var(--color-main); */
+            background-image: linear-gradient(to right, rgb(173, 228, 212), rgb(0, 161, 112));
+            height: 100%;
+            width: 20%;
+            position: absolute;
+            left: 0;
+            z-index: -1;
+        }
+        
+        @media screen and (max-width:1024px) {
+            .cards {
+                --spacing: 20px;
+                --columns: 2;
+            }
+        }
+        
+        @media screen and (max-width:768px) {
+            .cards {
+                --spacing: 20px;
+                --columns: 2;
+                width: 90%;
+            }
+        }
+        
+        @media screen and (max-width:600px) {
+            .cards {
+                --spacing: 20px;
+                --columns: 1;
+                width: 90%;
+            }
+        }
+        /*
+    color: #150517; black 
+*/
