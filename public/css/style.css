@@ -311,3 +311,13 @@
         /*
     color: #150517; black 
 */
+        /* login */
+        
+        .hidden {
+            display: none;
+        }
+        
+        label {
+            margin-bottom: 10px;
+            display: block;
+        }

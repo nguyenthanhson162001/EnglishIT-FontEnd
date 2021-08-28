@@ -6,27 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/all.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./public/css/all.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/login.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-
-
-
 </head>
 
 <body>
     <header>
+
         <div class="header-left">
             <a href="#default" class="logo"><i class="fad fa-globe-asia"> </i> English IT</a>
         </div>
         <div class="header-right default nav">
-            <div class="border-right "><a href="./login.html">Login</a></div>
-            <div><a href="./login.html">Register</a></div>
+            <div class="border-right "><a id="btn-login" disabled="true" onclick="login()">Login</a></div>
+            <a id="btn-logout" disabled="true" onclick="logout()">Log out</a>
         </div>
         <div class="header-right logged nav">
             <div class="avatar">
-                <img src="..//image//me1.jpg" alt="">
+                <img src="./public/image//me1.jpg" alt="">
             </div>
             <div class="border-right "><a class="name">Sơn nguyễn </a> </div>
             <a><i class="fad fa-clipboard-list"></i></a>
@@ -58,7 +56,7 @@
                             </div>
                         </div>
                         <div class="card-unit-image">
-                            <img src="..//image/EnglishIT2.jpg" alt="">
+                            <img src="./public/image/EnglishIT2.jpg" alt="">
                         </div>
                     </div>
                     <div class="content">
@@ -105,7 +103,7 @@
                             </div>
                         </div>
                         <div class="card-unit-image">
-                            <img src="..//image/EnglishIT2.jpg" alt="">
+                            <img src="./public/image/EnglishIT2.jpg" alt="">
                         </div>
                     </div>
                     <div class="content">
@@ -152,7 +150,7 @@
                             </div>
                         </div>
                         <div class="card-unit-image">
-                            <img src="..//image/EnglishIT2.jpg" alt="">
+                            <img src="./public/image/EnglishIT2.jpg" alt="">
                         </div>
                     </div>
                     <div class="content">
@@ -199,7 +197,7 @@
                             </div>
                         </div>
                         <div class="card-unit-image">
-                            <img src="..//image/EnglishIT2.jpg" alt="">
+                            <img src="./public/image/EnglishIT2.jpg" alt="">
                         </div>
                     </div>
                     <div class="content">
@@ -246,7 +244,7 @@
                             </div>
                         </div>
                         <div class="card-unit-image">
-                            <img src="..//image/EnglishIT2.jpg" alt="">
+                            <img src="./public/image/EnglishIT2.jpg" alt="">
                         </div>
                     </div>
                     <div class="content">
@@ -293,7 +291,7 @@
                             </div>
                         </div>
                         <div class="card-unit-image">
-                            <img src="..//image/EnglishIT2.jpg" alt="">
+                            <img src="./public/image/EnglishIT2.jpg" alt="">
                         </div>
                     </div>
                     <div class="content">
@@ -340,7 +338,7 @@
                             </div>
                         </div>
                         <div class="card-unit-image">
-                            <img src="..//image/EnglishIT2.jpg" alt="">
+                            <img src="./public/image/EnglishIT2.jpg" alt="">
                         </div>
                     </div>
                     <div class="content">
@@ -371,11 +369,10 @@
 
             </div>
         </div>
-        <footer>
-
-        </footer>
-
-        <script src="..//js/main.js"></script>
+        <script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js"></script>
+        <script src="https://cdn.auth0.com/js/auth0/9.16.4/auth0.min.js"></script>
+        <script src="./public/js/main.js"></script>
+        <script src="./public/js/auth.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 
