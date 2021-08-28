@@ -3,7 +3,7 @@ const configureClient = async() => {
     // const config = await response.json();
     auth0 = await createAuth0Client({
         domain: 'dev-az6c4dx3.us.auth0.com',
-        clientID: 'oU2OclAGrCxQpRAHLaYVCdzMxhCiO9xj'
+        clientId: 'oU2OclAGrCxQpRAHLaYVCdzMxhCiO9xj'
     });
 };
 
@@ -27,11 +27,11 @@ window.onload = async() => {
     }
 };
 
-async function login() {
+const login = async() => {
     await auth0.loginWithRedirect({
         redirect_uri: window.location.origin
     });
-}
+};
 
 function logout() {
     auth0.logout({
