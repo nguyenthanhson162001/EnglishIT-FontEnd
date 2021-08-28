@@ -2,8 +2,8 @@ const configureClient = async() => {
     // const response = await fetchAuthConfig();
     // const config = await response.json();
     auth0 = await createAuth0Client({
-        domain: 'dev-az6c4dx3.us.auth0.com',
-        clientId: 'oU2OclAGrCxQpRAHLaYVCdzMxhCiO9xj'
+        domain: 'sowndev.us.auth0.com',
+        clientId: 'UvdGPyWaumDZkmN30ZaGQL64MJIfkl5Z'
     });
 };
 
