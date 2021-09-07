@@ -12,6 +12,8 @@
             background-color: #FFFFFF;
             --color-main: rgb(0, 161, 112);
             background-color: rgb(240, 240, 240);
+            --percent-all: 0%;
+            --percent-pill: 0%;
         }
         
         a {
@@ -105,6 +107,7 @@
             margin-bottom: var(--spacing);
             display: flex;
             flex-direction: column;
+            transition: all 1s;
         }
         
         .card-unit .card-unit-image {
@@ -126,21 +129,20 @@
         .card-unit .mask {
             background-color: #eaf3eee1;
             position: absolute;
-            z-index: -1;
+            z-index: 1;
             left: 0;
             right: 0;
-            height: 0;
+            height: 100%;
+            top: -200px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            transition: all 1s;
         }
         
         .card-unit:hover .mask {
-            position: absolute;
-            z-index: 1;
-            height: 100%;
-            transition: all 1s;
+            top: 0;
         }
         
         .card-unit:b .mask {
@@ -195,17 +197,13 @@
         
         .card-unit:hover .mask .mask-pill::before {
             content: "";
-            width: 100%;
+            width: var(--percent-pill);
             position: absolute;
             left: 0;
             top: 0;
             z-index: -1;
             transition: all 1.5s;
         }
-        
-        .card-unit .mask .anh-viet::before {}
-        
-        .card-unit .mask .viet-anh {}
         
         .card-unit .content {
             color: #333;
@@ -280,7 +278,7 @@
             /* background-color: var(--color-main); */
             background-image: linear-gradient(to right, rgb(173, 228, 212), rgb(0, 161, 112));
             height: 100%;
-            width: 20%;
+            width: var(percent-all);
             position: absolute;
             left: 0;
             z-index: -1;

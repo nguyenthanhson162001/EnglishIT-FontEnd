@@ -10,35 +10,33 @@
     <link rel="stylesheet" href="./public/css/style.css">
     <link rel="stylesheet" href="./public/css/exam.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-
-
 </head>
 
 
 <body>
     <header>
         <div class="header-left">
-            <a href="#default" class="logo"><i class="fad fa-globe-asia"></i> English IT</a>
+            <a href="/" class="logo"><i class="fad fa-globe-asia"> </i> English IT</a>
         </div>
-        <div class="header-right default nav">
-            <div class="border-right "><a href="/">Login</a></div>
-            <div><a href="">Register</a></div>
+        <div class="header-right default  nav nav-info-user">
+            <div class=""><a id="btn-login" disabled="true" onclick="login()">Login</a></div>
+            <!-- <a id="btn-logout" disabled="true" onclick="logout()">Log out</a> -->
         </div>
         <div class="header-right logged nav">
-            <div class="avatar">
-                <img src="..//image//me1.jpg" alt="">
+            <!-- <div class="avatar">
+                <img src="./public/image//me1.jpg" alt="">
             </div>
             <div class="border-right "><a class="name">Sơn nguyễn </a> </div>
             <a><i class="fad fa-clipboard-list"></i></a>
             <a><i class="fad fa-bell"></i></a>
-            <a><i class="fad fa-angle-down"></i></a>
+            <a><i class="fad fa-angle-down"></i></a> -->
         </div>
     </header>
     <div class="container-exam">
         <!-- <i class="fad fa-sign-out"></i> -->
         <div class="center">
-            <h3>Unit 1 </h3>
-            <div class="around">
+            <h3 class="unit-name">Waiting...</h3>
+            <div class="around ">
                 <div class="line">
                     <!-- <div class="present"></div> -->
                     <!-- <i class="percent_number">100%</i> -->
@@ -54,46 +52,111 @@
                             <i class="fad fa-clock"></i>
                             <span>00:01</span>
                         </div>
-                        <div class="question-number">
-                            <span>10 / 25</span>
-
+                        <div class="question-number" style='position: absolute;'>
+                            <span><span class="indexQuestion">1 </span> / <span class="sumNumberQuestion"></span></span>
                             <!-- <i class="fad fa-angle-right"></i> -->
                             <!-- <i class="fad fa-caret-right"></i> -->
                             <!-- <i class="far fa-arrow-alt-to-right"></i> -->
                         </div>
                         <div class='volumne'>
-                            <i class="fad fa-volume-slash"></i>
+                            <!-- <i class="fad fa-volume-slash"></i> -->
                             <!-- <i class="fad fa-volume-up"></i> -->
-                        </div>
+                            <div class='autoplay active'> <i class="far fa-toggle-off" style="padding-right: 10px;"></i>Auto play audio</div>
 
+                        </div>
                     </div>
                     <div class="content">
-
                         <div class="question">
                             <div class="volumn_again">
-                                <i class="fal fa-volume-up"></i>
+                                <i class="fal fa-volume-up " onclick="document.querySelector('audio').play()"></i>
                             </div>
-                            <span>Ability</span>
+                            <span>Question</span>
+                            <small class="spelling">Spelling</small>
+                            <p class="type">Nouse</p>
+                        </div>
+
+                        <div class="audio" style="display: none;">
+                            <audio controls reload>
+                                <source src="https://api.voicerss.org/?key=19d2c8b86ed1444198305384a7129452&hl=en-us&c=MP3&f=16khz_16bit_stereo&src=" type="audio/ogg">
+                            </audio>
                         </div>
                         <div class="Choice">
                             <div class="row">
-                                <button class="choice-btn correct">Có khả năng</button>
+                                <button class="choice-btn  correct">Có khả năng</button>
                                 <button class="choice-btn ">Bằng Bằng  chứng</button>
                             </div>
                             <div class="row">
                                 <button class="choice-btn ">Có Nguy cơ</button>
-                                <button class="choice-btn uncorrect">Xung</button>
+                                <button class="choice-btn  uncorrect">Xung</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="result">
 
+                <div class="awaitingLogin ">
+                    <img src="./public//image//loading2.gif" alt="" srcset="">
                 </div>
+                <div class="result">
+                    <div class="header">
+                        <img src="./public/image/congratulation3.png" alt="">
+                    </div>
+                    <div class="content-result">
+                        <div class="info">
+                            <div class="percent">
+                                90%
+                            </div>
+                            <div class="time">
+                                <i class="fal fa-clock"></i>
+                                <span>00:01</span>
+                            </div>
+                            <p>Congratulations on passing the exam</p>
+                        </div>
+                        <br>
+                        <div class="list-incorrect">
+                            <div class="title">
+                                List vocabularies uncorrect
+                            </div>
+                            <ul class='items'>
+                                <!-- <li class="item">
+                                    <div class="volumn_again" onclick="read('vocabulary')">
+                                        <i class="fal fa-volume-up "></i>
+                                    </div>
+                                    <div class="question">
+                                        <div class="vocabulary">
+                                            <span>Vocabulary</span>
+                                        </div>
+                                        <div class="bottom">
+                                            Từ vựng
+                                        </div>
+                                    </div>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="icon again" onclick='location.reload()'>
+                            <button>  <i class="fas fa-undo-alt"></i> </button>
+                            <!-- -->
+                        </div>
+                        <a class="icon return" href="/">
+                            <!-- <i class=""></i> -->
+                            <button>  <i class="fas fa-home"></i> </button>
+                        </a>
+                    </div>
+                </div>
+
             </div>
+
         </div>
     </div>
 </body>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jqusery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js"></script>
+<script src="https://cdn.auth0.com/js/auth0/9.16.4/auth0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.socket.io/3.1.3/socket.io.min.js" integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./public/js/auth.js"></script>
+<script src=" ./public/js//exam.js"></script>
 
 </html>

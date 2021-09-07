@@ -1,0 +1,5 @@
+{
+    "domain": "sowndev.us.auth0.com",
+    "clientId": "UvdGPyWaumDZkmN30ZaGQL64MJIfkl5Z",
+    "audience": "http://localhost:3004/api"
+}
