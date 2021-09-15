@@ -1,5 +1,5 @@
 var auth0 = null;
-const url = "http://localhost:3004";
+const url = "http://ec2-18-142-71-170.ap-southeast-1.compute.amazonaws.com:3000";
 const myStorage = window.localStorage;
 (function() {
     {
